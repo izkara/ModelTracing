@@ -34,9 +34,9 @@ int main(int argc, char *argv[])
 	copy(file_name.begin(), file_name.end(), file);
 	file[file_name.size()] = '\0';
 
-	TriMesh* Cow = new TriMesh(file);//Load a cow model
+	TriMesh* Cow = new TriMesh(file, true);//Load a cow model
 	Cow->setName("Cow");//give it a name
-	Cow->setMagnetic(true);//Make the Cylinder magnetic
+	//Cow->setMagnetic(true);//Make the Cylinder magnetic
     DisplayObject->tell(Cow);//Tell Quick Haptics that the sphere exists
 
 	hlEndShape();
